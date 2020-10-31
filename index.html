@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-    
-    <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>ZUNO - A Design System</title>
@@ -25,7 +25,6 @@
             font-size: 1rem;
             line-height: 1.5;
             margin: 0 auto;
-            /*    max-width: 724px;*/
             padding: 2em 2em 4em;
         }
 
@@ -42,11 +41,7 @@
             font-size: 7.5rem;
             font-weight: 400;
             text-decoration-style: solid;
-            /*    text-decoration-color: red;*/
-            /*    text-decoration-skip: ink;/*/
             text-decoration: overline;
-            /*        border-top-width: 1px;*/
-            /*    border-top-style: solid;*/
 
         }
 
@@ -75,8 +70,6 @@
                 -webkit-text-stroke-width: 0.5rem;
                 -webkit-text-stroke-color: white;
                 font-size: 10rem;
-                /*    border-bottom-width: 2px;*/
-                /*    border-bottom-style: solid;*/
                 margin-bottom: 0px;
             }
 
@@ -98,6 +91,7 @@
             height: 100%;
             top: 0;
         }
+
     </style>
 </head>
 
@@ -318,7 +312,7 @@
     //gl_ClipDistance[0];
   
   }
-  
+
   
 </script>
     <script id="fragmentShader" type="x-shader/x-vertex">
@@ -481,8 +475,7 @@
             _primitive.mesh.rotation.y += options.perlin.vel;
             _primitive.mesh.rotation.x = (Math.sin(performance * options.spin.sinVel) * options.spin.ampVel) * Math.PI / 180;
             //---
-            mat.uniforms['time'].value = options.perlin.spe #
-            ed * (Date.now() - start);
+            mat.uniforms['time'].value = options.perlin.speed * (Date.now() - start);
             mat.uniforms['pointscale'].value = options.perlin.perlins;
             mat.uniforms['decay'].value = options.perlin.decay;
             mat.uniforms['complex'].value = options.perlin.complex;
@@ -495,5 +488,5 @@
             renderer.render(scene, camera);
         }
     </script>
-
-</body></html>
+</body>
+</html>
