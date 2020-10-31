@@ -14,12 +14,24 @@
         <h1 class="title"><b>ZUNO</b></h1>
         <h2 class="subtitle">A Design System</h2>
         <h3>Getting Started</h3>
-        <h3> Works with</h3>
-        <p>Chrome, Firefox Edge, Safari</p>
+        <p>Download here, and import it like this</p>
+        <h3>Works with</h3>
+        <p>Chrome, Firefox, Edge, Safari</p>
+        <h3>Colour Pallete</h3>
+        <h3>Text</h3>
+        <h3>Button</h3>
+<!--        <h3>Button</h3>-->
+<!--        <h3>Button</h3>-->
+<!--        <h3>Button</h3>-->
+<!--        <h3>Button</h3>-->
+<!--        <h3>Button</h3>-->
     </div>
-    <div id="container"></div>
-    <script id="vertexShader" type="x-shader/x-vertex">
-        vec3 mod289(vec3 x)
+    <div id="container" class="no-flow-y"></div>
+</body>
+
+
+<script id="vertexShader" type="x-shader/x-vertex">
+    vec3 mod289(vec3 x)
         {
         return x - floor(x * (1.0 / 289.0)) * 289.0;
         }
@@ -229,8 +241,8 @@
 
   
 </script>
-    <script id="fragmentShader" type="x-shader/x-vertex">
-        varying float qnoise;
+<script id="fragmentShader" type="x-shader/x-vertex">
+    varying float qnoise;
   
   uniform float time;
   uniform bool redhell;
@@ -251,10 +263,7 @@
     gl_FragColor = vec4(r, g, b, 1.0);
   }
 </script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js'>
-    </script>
-    <script src="script.js"></script>
-</body>
-
-</html>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js'>
+</script>
+<script src="script.js"></script></html>
