@@ -23,7 +23,6 @@
             alpha: true
         });
         renderer.setSize(_width, _height);
-        renderer.setClearColor(0x000000, 0);
         container = document.getElementById("container");
         container.appendChild(renderer.domElement);
         window.addEventListener('resize', onWindowResize, false);
