@@ -8,12 +8,6 @@
         animation();
     }
 
-    var Theme = {
-        _darkred: 0x000000
-    }
-
-    //--------------------------------------------------------------------
-
     var scene, camera, renderer, container;
     var start = Date.now();
     var _width, _height;
@@ -21,23 +15,16 @@
     function createWorld() {
         _width = window.innerWidth;
         _height = window.innerHeight;
-        //---
         scene = new THREE.Scene();
-        //scene.fog = new THREE.Fog(Theme._darkred, 8, 20);
-        scene.background = new THREE.Color(Theme._darkred);
-        //---
         camera = new THREE.PerspectiveCamera(55, _width / _height, 1, 1000);
         camera.position.z = 12;
-        //---
         renderer = new THREE.WebGLRenderer({
             antialias: true,
-            alpha: false
+            alpha: true
         });
         renderer.setSize(_width, _height);
-        //---
         container = document.getElementById("container");
         container.appendChild(renderer.domElement);
-        //---
         window.addEventListener('resize', onWindowResize, false);
     }
 
@@ -49,12 +36,12 @@
         camera.updateProjectionMatrix();
         console.log('- resize -');
     }
+
     var mat;
     var primitiveElement = function () {
         this.mesh = new THREE.Object3D();
         mat = new THREE.ShaderMaterial({
             wireframe: false,
-            //fog: true,
             uniforms: {
                 time: {
                     type: "f",
