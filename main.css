@@ -21,7 +21,6 @@
        font-size: 1rem;
        line-height: 1.5;
        margin: 0 auto;
-       padding: 1rem;
    }
 
    .title {
@@ -34,11 +33,10 @@
 
    .subtitle {
        margin-top: 0;
-       font-size: 7.5rem;
+       font-size: 6.5rem;
        font-weight: 400;
        text-decoration-style: solid;
        text-decoration: overline;
-
    }
 
    h3,
